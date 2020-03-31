@@ -1,0 +1,10 @@
+{{- if eq "eks" .Values.jxRequirements.cluster.provider }}
+serviceaccount:
+  enabled: false
+extraArgs:
+  - repository: https://github.com/helm/charts/tree/master/stable/cluster-autoscaler
+  - --set: rbac.serviceAccountAnnotations.eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.project }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-cluster-autoscaler-cluster-autoscaler
+
+rbac:
+  create: true
+
