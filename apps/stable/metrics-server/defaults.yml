@@ -1,2 +1,2 @@
-namespace: metrics-server
+namespace: kube-system
 phase: system
