@@ -2,6 +2,13 @@ controller:
   replicaCount: 3
   publishService:
     enabled: true
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
   service:
     omitClusterIP: true
   {{- if eq .Values.jxRequirements.cluster.provider "kind" }}

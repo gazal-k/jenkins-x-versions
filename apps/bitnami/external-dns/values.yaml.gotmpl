@@ -31,3 +31,11 @@ domainFilters:
 - "{{ .ingress.domain }}"
 {{- end }}
 {{- end }}
+
+resources:
+  limits:
+    cpu: 50m
+    memory: 50Mi
+  requests:
+    memory: 50Mi
+    cpu: 10m

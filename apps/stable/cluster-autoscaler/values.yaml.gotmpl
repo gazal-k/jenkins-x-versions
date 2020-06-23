@@ -19,3 +19,11 @@ rbac:
   serviceAccountAnnotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.project }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-cluster-autoscaler-cluster-autoscaler
 {{- end }}
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 300Mi
+  requests:
+    cpu: 100m
+    memory: 300Mi
