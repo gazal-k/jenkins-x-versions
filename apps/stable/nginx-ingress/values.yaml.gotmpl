@@ -20,6 +20,7 @@ controller:
     annotations:
       service.beta.kubernetes.io/aws-load-balancer-type: nlb
   {{- end }}
+    enableHttp: false
 defaultBackend:
   service:
     omitClusterIP: true
