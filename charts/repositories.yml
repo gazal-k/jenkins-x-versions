@@ -24,3 +24,9 @@ repositories:
   - prefix: external-secrets
     urls:
       - https://godaddy.github.io/kubernetes-external-secrets
+  - prefix: incubator
+    urls:
+      - https://kubernetes-charts-incubator.storage.googleapis.com
+  - prefix: eks
+    urls:
+      - https://aws.github.io/eks-charts
