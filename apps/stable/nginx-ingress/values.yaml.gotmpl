@@ -1,14 +1,19 @@
 controller:
-  replicaCount: 3
+  autoscaling:
+    enabled: true
+    minReplicas: 3
+    maxReplicas: 40
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 70
+  useComponentLabel: true
   publishService:
     enabled: true
   resources:
     limits:
-      cpu: 100m
-      memory: 128Mi
+      memory: 400Mi
     requests:
-      cpu: 50m
-      memory: 64Mi
+      cpu: 200m
+      memory: 400Mi
   service:
     omitClusterIP: true
   {{- if eq .Values.jxRequirements.cluster.provider "kind" }}
@@ -22,6 +27,7 @@ controller:
   {{- end }}
     enableHttp: false
 defaultBackend:
+  useComponentLabel: true
   service:
     omitClusterIP: true
 rbac:
