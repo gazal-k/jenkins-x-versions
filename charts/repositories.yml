@@ -30,3 +30,6 @@ repositories:
   - prefix: eks
     urls:
       - https://aws.github.io/eks-charts
+  - prefix: ingress-nginx
+    urls:
+      - https://kubernetes.github.io/ingress-nginx
