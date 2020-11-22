@@ -23,7 +23,7 @@ repositories:
       - https://storage.googleapis.com/solo-public-helm
   - prefix: external-secrets
     urls:
-      - https://godaddy.github.io/kubernetes-external-secrets
+      - https://external-secrets.github.io/kubernetes-external-secrets
   - prefix: incubator
     urls:
       - https://kubernetes-charts-incubator.storage.googleapis.com
